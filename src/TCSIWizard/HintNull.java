@@ -25,17 +25,17 @@ public class HintNull {
     class Person { }
 
     public static void main(String[] args) {
-//        Hint hint = Person.class.getAnnotation(Hint.class);
-//        System.out.println(hint);
-//        Hints hints1 = Person.class.getAnnotation(Hints.class);
-//        System.out.println(hints1.value().length);
-//        Hint[] hints2 = Person.class.getAnnotationsByType(Hint.class);
-//        System.out.println(hints2.length);
+        Hint hint = Person.class.getAnnotation(Hint.class);
+        System.out.println("hint : " + hint);
+        Hints hints1 = Person.class.getAnnotation(Hints.class);
+        System.out.println(hints1.value().length);
+        Hint[] hints2 = Person.class.getAnnotationsByType(Hint.class);
+        System.out.println(hints2.length);
 
-        int ar[] = new int[2];
-
-        Stream.iterate(new int[]{2,3}, t ->new int[]{ar[1],ar[0] +ar[1]}).limit(10)
-                .map(ar1 -> ar[0])
-                .forEach(System.out::println);
+//        int ar[] = new int[2];
+//
+//        Stream.iterate(new int[]{2,3}, t ->new int[]{ar[1],ar[0] +ar[1]}).limit(10)
+//                .map(ar1 -> ar[0])
+//                .forEach(System.out::println);
     }
 }

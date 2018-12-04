@@ -21,12 +21,6 @@ public class Solution1 {
         }
 
         String res = electionWinner(votes);
-
-//        bufferedWriter.write(res);
-//        bufferedWriter.newLine();
-//
-//        bufferedWriter.close();
-
         scanner.close();
     }
 
@@ -78,35 +72,37 @@ public class Solution1 {
         return ans;
     }
 
-    public static TreeMap<String, Integer> sortMapByValue(HashMap<String, Integer> map){
-        Comparator<String> comparator = new ValueComparator(map);
-        //TreeMap is a map sorted by its keys.
-        //The comparator is used to sort the TreeMap by keys.
-        TreeMap<String, Integer> result = new TreeMap<String, Integer>(comparator);
-        result.putAll(map);
-        return result;
-    }
 }
 
 
-class ValueComparator implements Comparator<String>{
 
-    HashMap<String, Integer> map = new HashMap<String, Integer>();
+//    public static TreeMap<String, Integer> sortMapByValue(HashMap<String, Integer> map){
+//        Comparator<String> comparator = new ValueComparator(map);
+//        //TreeMap is a map sorted by its keys.
+//        //The comparator is used to sort the TreeMap by keys.
+//        TreeMap<String, Integer> result = new TreeMap<String, Integer>(comparator);
+//        result.putAll(map);
+//        return result;
+//    }
 
-    public ValueComparator(HashMap<String, Integer> map){
-        this.map.putAll(map);
-    }
-
-    @Override
-    public int compare(String s1, String s2) {
-
-//        if(map.get(s2) >= map.get(s1)){
-//            return -1;
-//        }else{
-//            return 1;
-//        }
-
-        return s2.compareTo(s1);
-
-    }
-}
+//class ValueComparator implements Comparator<String>{
+//
+//    HashMap<String, Integer> map = new HashMap<String, Integer>();
+//
+//    public ValueComparator(HashMap<String, Integer> map){
+//        this.map.putAll(map);
+//    }
+//
+//    @Override
+//    public int compare(String s1, String s2) {
+//
+////        if(map.get(s2) >= map.get(s1)){
+////            return -1;
+////        }else{
+////            return 1;
+////        }
+//
+//        return s2.compareTo(s1);
+//
+//    }
+//}
